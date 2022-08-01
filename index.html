@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <meta charset="UTF-8">
+    <title>学习总结</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="个人博客">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
-  <div id="app"></div>
-  <script>
+<div id="app"></div>
+<script>
     window.$docsify = {
-      name: '',
-      repo: ''
+        name: '目录',
+        repo: '/README.md',
+        maxLevel: 3,// 最大支持渲染的标题层级
+        subMaxLevel: 4,
+        loadSidebar: true,//侧边栏,_sidebar.md
+        loadNavbar: true,// 导航栏,_navbar.md
+        auto2top: true,// 切换页面后是否自动跳转到页面顶部
+        coverpage: true,// 封面,_coverpage.md
+        themeColor: '#2478e3',// 主题颜色
+        search: {
+            paths: 'auto',
+            placeholder: '搜索',
+            noData: '真的找不到了',
+        },
+        markdown: {},
+        // 上下章节
+        pagination: {
+            previousText: '上一章节',
+            nextText: '下一章节',
+            crossChapter: true,
+            crossChapterText: true
+        },
     }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<!-- 代码高亮 -->
+<script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-c.min.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+<!-- 全文搜索,直接用官方提供的无法生效 -->
+<script src="//cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+<!-- 添加代码右上角复制到剪切板按钮 -->
+<script src="//unpkg.com/docsify-copy-code"></script>
+<!-- 支持Markdown中的TaLeX数学公式 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+<!-- 上下章节 -->
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- 评论 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<!-- <script>
+    const gitalk = new Gitalk({
+        clientID: 'f646e779968a82a16ab3',
+        clientSecret: 'e3535ab5b30ab1cfa5df8606e5dd4c91abcef675',
+        repo: 'myblogs',
+        owner: 'ZhuPeiwen',
+        admin: ['ZhuPeiwen']
+    })
+</script> -->
+
 </body>
 </html>
